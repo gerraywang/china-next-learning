@@ -1,12 +1,17 @@
 <html>
   <body>
     <div id="app"></div>
+    <!-- React用のPkg-->
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <!-- Babel Script -->
+    <!-- Babel Script  -->
+    <!-- Babelの役割として、JSXを標準Javascriptに翻訳する、これがなかったら、Reactのソースが実行できない-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
-        const app = document.getElementById("app")   
+        const app = document.getElementById("app")
+        /**props操作：props = {title: "haha"}
+        {props.title}
+        */ 
         function Header({title}) {
             return <h1>{title? title: "Default title"}</h1>;
          } 
