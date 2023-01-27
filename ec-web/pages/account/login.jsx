@@ -22,11 +22,12 @@ function Login() {
     // get functions to build form with useForm() hook
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
-
+    
     function onSubmit({ username, password }) {
         return userService.login(username, password)
-            .then(() => {
+            .then(user => {
                 // get return url from query parameters or default to '/'
+                console.log(user);
                 const returnUrl = router.query.returnUrl || '/';
                 router.push(returnUrl);
             })

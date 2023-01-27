@@ -7,5 +7,14 @@
         "id": 1,
         "dateCreated": "2023-01-27T10:53:24.337Z",
         "dateUpdated": "2023-01-27T10:53:24.337Z"
+    },
+    {
+        "firstName": "zhexue",
+        "lastName": "jin",
+        "username": "jin",
+        "hash": "$2a$10$cK8aqEgD26HhueKDIAqRj.Gk3UJlVXosCS.XhT3XV4irWPdM0.Vp2",
+        "id": 2,
+        "dateCreated": "2023-01-27T11:06:37.156Z",
+        "dateUpdated": "2023-01-27T11:06:37.156Z"
     }
 ]

@@ -3,15 +3,33 @@ const fs = require('fs');
 // users in JSON file for simplicity, store in a db for production applications
 let users = require('data/users.json');
 
+
 export const usersRepo = {
     getAll: () => users,
+    getByToken,
     getById: id => users.find(x => x.id.toString() === id.toString()),
     find: x => users.find(x),
     create,
     update,
     delete: _delete
 };
-
+    
+function getByToken(token) {
+    return async () => {
+		try {
+			const res = await fetch(
+				'https://admin-api-et76x6ix4q-an.a.run.app/api/secure'
+			);
+			const data = await res.json();
+			console.log(data);
+            return data;
+		} catch (err) {
+			console.log(err);
+            return err;
+		}
+	};
+}
+    
 function create(user) {
     // generate new user id
     user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;

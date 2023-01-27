@@ -21,7 +21,8 @@ export const userService = {
 };
 
 function login(username, password) {
-    return fetchWrapper.post(`${baseUrl}/authenticate`, { username, password })
+
+    return fetchWrapper.post(`${baseUrl}/authenticate`, { username })
         .then(user => {
             // publish user to subscribers and store in local storage to stay logged in between page refreshes
             userSubject.next(user);
