@@ -38,10 +38,14 @@ function authenticate(req, res) {
     user.then((values) => {
         console.log("authenticate then")
         console.log(values);
-        if (values.message !== 'ok')
-            throw 'Username or password is incorrect';
-        return res.status(200).json({
-            message: values.message
-        });
+        if (values.message !== 'ok') {
+            return res.status(400).json({
+                message: 'Username or password is incorrect'
+            });
+        } else {
+            return res.status(200).json({
+                message: values.message
+            });
+        }
     });
 }
