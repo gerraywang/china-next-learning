@@ -11,3 +11,10 @@ step3) add date-fns
 ```
 npm i date-fns
 ```
+
+step4) add request-promise
+```
+npm install request-promise
+```
+### react-hook-form learning
+https://reffect.co.jp/react/react-hook-form
