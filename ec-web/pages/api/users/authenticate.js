@@ -35,10 +35,13 @@ function authenticate(req, res) {
     console.log(req.body);
     console.log(username);
     const user = usersRepo.getByToken(username);
-    console.log(user);
-    return res.status(200).json({
-        message: user.message
-            
+    user.then((values) => {
+        console.log("authenticate then")
+        console.log(values);
+        if (values.message !== 'ok')
+            throw 'Username or password is incorrect';
+        return res.status(200).json({
+            message: values.message
+        });
     });
-
 }

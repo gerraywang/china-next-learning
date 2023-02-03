@@ -1,4 +1,5 @@
 const fs = require('fs');
+const request = require('request-promise');
 
 // users in JSON file for simplicity, store in a db for production applications
 let users = require('data/users.json');
@@ -6,7 +7,7 @@ let users = require('data/users.json');
 
 export const usersRepo = {
     getAll: () => users,
-    getByToken,
+    getByToken: x => getByToken(x),
     getById: id => users.find(x => x.id.toString() === id.toString()),
     find: x => users.find(x),
     create,
@@ -15,19 +16,32 @@ export const usersRepo = {
 };
     
 function getByToken(token) {
-    return async () => {
-		try {
-			const res = await fetch(
-				'https://admin-api-et76x6ix4q-an.a.run.app/api/secure'
-			);
-			const data = await res.json();
-			console.log(data);
-            return data;
-		} catch (err) {
-			console.log(err);
-            return err;
-		}
-	};
+    console.log('users-repo getByToken');
+    // const res = request('GET', 'https://admin-api-et76x6ix4q-an.a.run.app/api/secure', {
+    //     headers: {
+    //         'Content-type': 'application/json',
+    //         'Authorization': 'Bearer ' + token,
+    //     },
+    // });
+    // console.log(res.getBody())
+    // return res.getBody();
+    return new Promise((resolve,reject) => {
+        var options = {
+          url: 'https://admin-api-et76x6ix4q-an.a.run.app/api/secure',
+          headers: {
+              'Content-type': 'application/json',
+              'Authorization': 'Bearer ' + token,
+          },
+          method: 'GET',
+          json: true
+        }
+    
+        request(options).then((response) => {
+            console.log(response);
+            resolve(response);
+        });    
+    });
+
 }
     
 function create(user) {
