@@ -43,7 +43,7 @@ export default Home;
 function Home() {
     const router = useRouter();
     function clickMe() {
-        router.push("nyukamenu");
+        router.push("/");
     }
 
     return (
@@ -51,9 +51,8 @@ function Home() {
             <div className="container">
                
            
-                <Button onClick={clickMe}>入荷業務</Button>
-                <Button onClick={clickMe}>出荷業務</Button>
-                <Button onClick={clickMe}>棚卸業務</Button>
+                <Button onClick={clickMe}>入荷検品</Button>
+                <Button onClick={clickMe}>入庫</Button>
             </div>
         </div>
     );
