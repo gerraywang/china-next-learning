@@ -43,16 +43,38 @@ export default Home;
 function Home() {
     const router = useRouter();
     function clickMe() {
-        router.push("nyukabi");
+        router.push("/");
     }
 
     return (
         <div className="p-4">
             <div className="container">
                
-           
-                <Button onClick={clickMe}>入荷検品</Button>
-                <Button onClick={clickMe}>入庫</Button>
+               <label>
+               入荷予定日
+               <br/> 
+               <input name="myInput" />
+               <br/> 
+                ~
+               <br/> 
+               <input name="myInput" />
+               <br/> 
+               仕入先
+               <br/> 
+               <input name="myInput" />
+               <br/>
+               <p>コカコーラ</p> 
+
+
+
+               </label>
+               <div>
+            
+                <Button onClick={clickMe}>戻る</Button>
+
+
+                <Button onClick={clickMe}>次へ</Button>
+                </div>
             </div>
         </div>
     );
