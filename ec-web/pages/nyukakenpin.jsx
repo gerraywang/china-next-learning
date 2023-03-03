@@ -51,29 +51,36 @@ function Home() {
             <div className="container">
                
                <label>
-               入荷予定日
-               <br/> 
+               <span> 999888</span>　
+               <span> 01</span>　
+               <br/>
+               <br/>
+               JAN: 
                <input name="myInput" />
                <br/> 
-                ~
+               <p>おいしい牛乳</p> 
                <br/> 
-               <input name="myInput" />
-               <br/> 
-               仕入先
-               <br/> 
+               <span> 9999</span>　
+               期限：
                <input name="myInput" />
                <br/>
-               <p>コカコーラ</p> 
-
-
-
+               指示数：
+               <span> 112</span>　
+               <span> 221</span>　
+               <br/>
+               実績数：
+               <span> 112</span>　
+               <span> 221</span>　
+               <br/>
+               入力数：
+               <input name="myInput" style={{width:"100px"}}/>
+               <input name="myInput" style={{width:"100px" }}/>
+               <br/>
                </label>
                <div>
-            
-                <Button onClick={clickMe}>戻る</Button>
-
-
-                <Button onClick={clickMe}>次へ</Button>
+                <Button onClick={clickMe}>一覧</Button>
+                <Button onClick={clickMe}>終了</Button>
+                <Button onClick={clickMe}>確定</Button>
                 </div>
             </div>
         </div>

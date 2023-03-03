@@ -43,7 +43,7 @@ export default Home;
 function Home() {
     const router = useRouter();
     function clickMe() {
-        router.push("/");
+        router.push("nyukakenpin");
     }
 
     return (
