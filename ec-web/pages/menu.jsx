@@ -48,11 +48,13 @@ function Home() {
     }
 
     return (
+        
         <div className="p-4">
             <div className="container">
                 <ButtonLi click={clickMe} text={"入荷業務"} classProp={"btn btn-primary"}/>
                 <Button onClick={clickMe}>出荷業務</Button>
                 <Button onClick={clickMe}>棚卸業務</Button>
+                <a href='/nyukamenu'>haha</a>
             </div>
         </div>
     );
