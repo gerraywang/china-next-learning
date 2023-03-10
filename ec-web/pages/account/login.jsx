@@ -6,6 +6,8 @@ import * as Yup from 'yup';
 import { Link } from 'components';
 import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
+import ButtonLi from '../../components/button';
+import ButtonMjia from 'components/buttonStyle';
 
 export default Login;
 
@@ -28,7 +30,7 @@ function Login() {
             .then(user => {
                 // get return url from query parameters or default to '/'
                 console.log(user);
-                const returnUrl = router.query.returnUrl || '/';
+                const returnUrl = router.query.returnUrl || '/menu';
                 router.push(returnUrl);
             })
             .catch(alertService.error);
@@ -50,10 +52,11 @@ function Login() {
                             <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                             <div className="invalid-feedback">{errors.password?.message}</div>
                         </div>
-                        <button disabled={formState.isSubmitting} className="btn btn-primary">
+                        <ButtonMjia text={"Login"} />
+                        {/*classProp={"btn btn-primary"} <button disabled={formState.isSubmitting} className="btn btn-primary">
                             {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                             Login
-                        </button>
+                        </button> */}
                         <Link href="/account/register" className="btn btn-link">Register</Link>
                     </form>
                 </div>

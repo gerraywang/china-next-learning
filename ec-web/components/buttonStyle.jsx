@@ -1,9 +1,14 @@
-import { userService } from 'services';
-import { Link } from 'components';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import ButtonLi from '../components/button';
 
+export default ButtonMjia
+
+function ButtonMjia({ text, click, classProp }) {
+    return (
+        <Button onClick={click} className={classProp}>
+            {text}
+        </Button>
+    );
+}
 const theme = {
     blue: {
       default: "#3f51b5",
@@ -14,7 +19,6 @@ const theme = {
       hover: "#ad1457"
     }
 };
-
 const Button = styled.button`
     background-color: ${(props) => theme[props.theme].default};
     color: white;
@@ -38,22 +42,3 @@ const Button = styled.button`
 Button.defaultProps = {
     theme: "blue"
 };
-  
-export default Home;
-
-function Home() {
-    const router = useRouter();
-    function clickMe() {
-        router.push("nyukamenu");
-    }
-
-    return (
-        <div className="p-4">
-            <div className="container">
-                <ButtonLi click={clickMe} text={"入荷業務"} classProp={"btn btn-primary"}/>
-                <Button onClick={clickMe}>出荷業務</Button>
-                <Button onClick={clickMe}>棚卸業務</Button>
-            </div>
-        </div>
-    );
-}
