@@ -53,6 +53,9 @@ function Home() {
     function tanaoroshi() {
         alert("棚卸業務へ、今回は実装しません！");
     }
+    function modoru() {
+        router.push("center");   
+    }
 
     return (
         
@@ -67,6 +70,7 @@ function Home() {
                 <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
                     <Button onClick={tanaoroshi}>棚卸業務</Button>
                 </div>
+                <Button style={{width: '100px'}} onClick={modoru}>戻る</Button>
             </div>
         </div>
     );

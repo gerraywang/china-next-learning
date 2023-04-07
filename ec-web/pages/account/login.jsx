@@ -30,7 +30,7 @@ function Login() {
             .then(user => {
                 // get return url from query parameters or default to '/'
                 console.log(user);
-                const returnUrl = router.query.returnUrl || '/menu';
+                const returnUrl = router.query.returnUrl || '/center';
                 router.push(returnUrl);
             })
             .catch(alertService.error);
