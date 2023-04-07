@@ -8,6 +8,9 @@ module.exports = {
             ? 'http://localhost:3000/api' // development api
             : 'http://localhost:3000/api' // production api
     },
+    async rewrites() {
+      return rewrites;
+    },
     async redirects() {
         return [
           {
@@ -19,3 +22,10 @@ module.exports = {
       }
 
 }
+//proxy: backend domain → frontend domain
+const rewrites = process.env.NODE_ENV === 'development' ? [
+  {
+    source: '/api_haha/:path*',
+    destination: 'https://ec-warehouse-et76x6ix4q-an.a.run.app/:path*',
+  },
+] : [];

@@ -52,19 +52,24 @@ function Home() {
     }
    
     const [name, setName] = useState('');
-  const [responseData, setResponseData] = useState(null);
-
+    const [response, setResponse] = useState('');
+    
+    //api/my-api?center_no=
 
   const handleBlur = async () => {
-    const response = await fetch('https://ec-warehouse-et76x6ix4q-an.a.run.app/api/v1/center?center_no=${name}', {
+    const url = `/api_haha/api/v1/center?center_no=${name}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    /*const response = await fetch('https://ec-warehouse-et76x6ix4q-an.a.run.app/api/v1/center?center_no=${name}', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
     
     });
-    const data = await response.json();
-    alert(data);
+    const data = await response.json();*/
+    setResponse(data);
+    //alert(data);
   };
   
   const handleNameChange = (event) => {
@@ -84,6 +89,9 @@ function Home() {
                <input style={{ width: '200px' }} value={name} onChange={handleNameChange}  onBlur={handleBlur}/>
                <br/> 
                </label>
+                {response && (
+                  <p>センター名: {JSON.stringify(response.CenterInfo.center_name)}</p>
+                )}
                <div>
             
                 <Button onClick={modoru}>戻る</Button>
