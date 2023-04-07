@@ -48,10 +48,10 @@ function Home() {
         router.push("nyukamenu");
     }
     function syuka() {
-        router.push("nyukamenu");
+        alert("出荷業務へ、今回は実装しません！");
     }
     function tanaoroshi() {
-        router.push("nyukamenu");
+        alert("棚卸業務へ、今回は実装しません！");
     }
 
     return (

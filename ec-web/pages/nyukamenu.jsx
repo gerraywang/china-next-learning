@@ -21,6 +21,7 @@ const Button = styled.button`
     border-radius: 5px;
     outline: 0;
     text-transform: uppercase;
+    width:250px;
     margin: 10px 0px;
     cursor: pointer;
     box-shadow: 0px 2px 2px lightgray;
@@ -49,10 +50,15 @@ function Home() {
     return (
         <div className="p-4">
             <div className="container">
-               
-           
-                <Button onClick={clickMe}>入荷検品</Button>
-                <Button onClick={clickMe}>入庫</Button>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <h4>入荷メニュー画面</h4>
+                </div>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <Button onClick={clickMe}>入荷検品</Button>
+                </div>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <Button onClick={clickMe}>入庫</Button>
+                </div>
             </div>
         </div>
     );

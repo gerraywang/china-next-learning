@@ -2,6 +2,7 @@ import { userService } from 'services';
 import { Link } from 'components';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import DateInput from 'components/DateInput';
 
 const theme = {
     blue: {
@@ -53,11 +54,11 @@ function Home() {
                <label>
                入荷予定日
                <br/> 
-               <input name="myInput" />
+               <DateInput style={{ width: '200px' }}/>
                <br/> 
                 ~
                <br/> 
-               <input name="myInput" />
+               <DateInput style={{ width: '200px' }} />
                <br/> 
                仕入先
                <br/> 

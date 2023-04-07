@@ -70,10 +70,10 @@ function App({ Component, pageProps }) {
             {/* credits */}
             <div className="text-center mt-4">
                 <p>
-                    <a href="https://jasonwatmore.com/post/2021/08/19/next-js-11-user-registration-and-login-tutorial-with-example-app" target="_top">Next.js 11 - User Registration and Login Tutorial with Example App</a>
+                    <a href="https://jasonwatmore.com/post/2021/08/19/next-js-11-user-registration-and-login-tutorial-with-example-app" target="_top">this is a test project of ec-web</a>
                 </p>
                 <p>
-                    <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+                    <a href="https://jasonwatmore.com" target="_top">retailai.jp</a>
                 </p>
             </div>
         </>
