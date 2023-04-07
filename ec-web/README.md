@@ -48,3 +48,5 @@ http://localhost:8080/api/v1/nyuka/update
     “jiseki_su”:100
 }
 ```
+### openapi
+https://ec-warehouse-et76x6ix4q-an.a.run.app/swagger/index.html#/default
