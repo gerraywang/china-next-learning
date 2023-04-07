@@ -10,3 +10,12 @@ Documentation and live demo available at <https://jasonwatmore.com/post/2021/08/
 ```shell
 npm install react-hook-form
 ```
+
+login test
+
+```shell
+74917b8d-447c-11ed-b7a9-64d75dd587d2
+login api:https://ec-warehouse-et76x6ix4q-an.a.run.app/api/v1/login?id=2
+centerapi:https://ec-warehouse-et76x6ix4q-an.a.run.app/api/v1/center?center_no=0093
+sireapi:https://ec-warehouse-et76x6ix4q-an.a.run.app/api/v1/vender?vender_no=4466
+```

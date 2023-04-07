@@ -20,6 +20,7 @@ const Button = styled.button`
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
+    width:250px;
     outline: 0;
     text-transform: uppercase;
     margin: 10px 0px;
@@ -43,18 +44,29 @@ export default Home;
 
 function Home() {
     const router = useRouter();
-    function clickMe() {
+    function nyuka() {
+        router.push("nyukamenu");
+    }
+    function syuka() {
+        router.push("nyukamenu");
+    }
+    function tanaoroshi() {
         router.push("nyukamenu");
     }
 
     return (
         
-        <div className="p-4">
+        <div className="p-4" style={{alignItems:'center'}}>
             <div className="container">
-                <ButtonLi click={clickMe} text={"入荷業務"} classProp={"btn btn-primary"}/>
-                <Button onClick={clickMe}>出荷業務</Button>
-                <Button onClick={clickMe}>棚卸業務</Button>
-                <a href='/nyukamenu'>haha</a>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <Button onClick={nyuka}>入荷業務</Button>
+                </div>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <Button onClick={syuka}>出荷業務</Button>
+                </div>
+                <div style={{display: 'flex',alignItems:'center',justifyContent: 'center'}}>
+                    <Button onClick={tanaoroshi}>棚卸業務</Button>
+                </div>
             </div>
         </div>
     );
